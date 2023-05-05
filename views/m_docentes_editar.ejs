@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>
+        Sistema de control de Ingreso
+    </title>
+</head>
+<body>
+    <h1>Editar Docente</h1>
+    <hr>
+    <form method=post action=/m_docentes_grabar_editar>
+        <input type=hidden name=xid id=xid value=<%= docente._id %>>
+        <table border=0>
+            <tr>
+                <td>Código: </td><td><input type="text" name="xcod" id="xcod" size="10" value=<%= docente.codigo%>></td>
+            </tr>
+            <tr>
+                <td>Nombres: </td><td><input type="text" name="xnom" id="xnom" size="40" value=<%= docente.nombre%>></td>
+            </tr>
+            <tr>
+                <td>Departamento: </td><td><input type="text" name="xdep" id="xdep" size="40" value=<%= docente.departamento%>></td>
+            </tr>
+            <tr>
+                <td>Curso: </td><td><input type="text" name="xcur" id="xcur" size="40" value=<%= docente.curso%>></td>
+            </tr>
+            <tr>
+                <td>Correo: </td><td><input type="text" name="xcor" id="xcor" size="30" value=<%= docente.correo%>></td>
+            </tr>
+            <tr>
+                <td></td><td><input type="submit" value="Grabar"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

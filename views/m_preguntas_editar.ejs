@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>
+        Sistema de control de Ingreso
+    </title>
+</head>
+<body>
+    <h1>Editar Pregunta</h1>
+    <hr>
+    <form method=post action=/m_preguntas_grabar_editar>
+        <input type=hidden name=xid id=xid value=<%= preguntas._id %>>
+        <table border=0>
+            <tr>
+                <td>Curso: </td><td><input type="text" name="xcur" id="xcur" size="40" value=<%= preguntas.curso%>></td>
+            </tr>
+            <tr>
+                <td>Pregunta: </td><td><input type="text" name="xpre" id="xpre" size="100" value=<%= preguntas.pregunta %>></td>
+            </tr>
+            <tr>
+                <td>Respuesta correcta: </td><td><input type="text" name="xres" id="xres" size="100" value=<%= preguntas.resCorr%>></td>
+            </tr>
+            <tr>
+                <td></td><td><input type="submit" value="Grabar"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

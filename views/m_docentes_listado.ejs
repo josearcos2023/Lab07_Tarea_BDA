@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>
+        Sistema de control de Ingreso
+    </title>
+</head>
+<body>
+    <h1>Mantenimiento de Docentes</h1>
+    <hr>
+    <p><a href=/m_docentes_nuevo>Nuevo Docente</a></p>
+    <table border=1>
+        <tr>
+            <th>ID</th>
+            <th>CODIGO</th>
+            <th>NOMBRES</th>
+            <th>DEPARTAMENTO</th>
+            <th>CURSO</th>
+            <th>CORREO</th>
+            <th colspan=2>ACCIONES</th>
+        </tr>
+        <% records.forEach(function(docentes){ %>
+            <tr>
+                <td><%= docentes._id %></td>
+                <td><%= docentes.codigo %></td>
+                <td><%= docentes.nombre %></td>
+                <td><%= docentes.departamento %></td>
+                <td><%= docentes.curso %></td>
+                <td><%= docentes.correo %></td>
+                <td><a href=/m_docentes_editar/<%= docentes._id %>>Editar</a> </td>
+                <td><a href=/m_docentes_eliminar/<%= docentes._id %>>Eliminar</a> </td>
+            </tr>
+        <% }); %>
+    </table>
+    <h3>Opciones</h3>
+    <ul>
+        <li><a href=/m_docentes_listado>Docentes</a></li><br>
+        <li><a href=/m_estudiantes_listado>Estudiantes</a></li><br>
+        <li><a href=/m_preguntas_listado>Preguntas</a></li><br>
+    </ul>
+</body>
+</html>
